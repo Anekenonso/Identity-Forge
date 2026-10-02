@@ -1,0 +1,223 @@
+{
+  "probes": [
+    {
+      "id": "direct-1",
+      "category": "direct_recall",
+      "prompt": "What is my full name and technical specialty?",
+      "expected_fact": "Alex Vance, senior distributed systems architect",
+      "gold_keywords": ["Alex", "Vance", "distributed systems", "architect"]
+    },
+    {
+      "id": "direct-2",
+      "category": "direct_recall",
+      "prompt": "What programming languages do I prefer?",
+      "expected_fact": "TypeScript and Rust",
+      "gold_keywords": ["TypeScript", "Rust"]
+    },
+    {
+      "id": "direct-3",
+      "category": "direct_recall",
+      "prompt": "Where am I currently based?",
+      "expected_fact": "London, United Kingdom",
+      "gold_keywords": ["London", "United Kingdom"]
+    },
+    {
+      "id": "direct-4",
+      "category": "direct_recall",
+      "prompt": "What is my preference regarding IDE themes and color modes?",
+      "expected_fact": "Dark mode with high contrast syntax highlighting",
+      "gold_keywords": ["dark mode", "high contrast"]
+    },
+    {
+      "id": "direct-5",
+      "category": "direct_recall",
+      "prompt": "What package manager do I prefer and why?",
+      "expected_fact": "pnpm due to deterministic symlinks",
+      "gold_keywords": ["pnpm", "symlink"]
+    },
+    {
+      "id": "direct-6",
+      "category": "direct_recall",
+      "prompt": "What CSS styling framework or approach did we choose?",
+      "expected_fact": "Vanilla CSS for maximum flexibility without Tailwind",
+      "gold_keywords": ["Vanilla CSS", "Tailwind"]
+    },
+    {
+      "id": "direct-7",
+      "category": "direct_recall",
+      "prompt": "What erasure coding protocol is used by Walrus storage?",
+      "expected_fact": "RedStuff erasure coding",
+      "gold_keywords": ["RedStuff"]
+    },
+    {
+      "id": "direct-8",
+      "category": "direct_recall",
+      "prompt": "What constitutes the sovereign identity root in our architecture?",
+      "expected_fact": "Ed25519 delegate keys on Sui",
+      "gold_keywords": ["delegate key", "Ed25519", "Sui"]
+    },
+    {
+      "id": "direct-9",
+      "category": "direct_recall",
+      "prompt": "What is our testing philosophy for unit tests?",
+      "expected_fact": "Deterministic unit tests with zero mock network sockets",
+      "gold_keywords": ["deterministic", "zero mock"]
+    },
+    {
+      "id": "direct-10",
+      "category": "direct_recall",
+      "prompt": "Where does the agent identity state live?",
+      "expected_fact": "Exclusively in Walrus blobs; the API server is completely stateless",
+      "gold_keywords": ["Walrus", "stateless"]
+    },
+
+    {
+      "id": "persona-1",
+      "category": "persona_style",
+      "prompt": "What tone and communication style should you use when responding to me?",
+      "expected_fact": "Concise, technically dense style with zero conversational filler",
+      "gold_keywords": ["concise", "technically dense", "filler"]
+    },
+    {
+      "id": "persona-2",
+      "category": "persona_style",
+      "prompt": "Who are you and what is your relationship to me?",
+      "expected_fact": "IdentityForge assistant whose memory is owned by Alex Vance on Walrus",
+      "gold_keywords": ["IdentityForge", "Alex", "Walrus"]
+    },
+    {
+      "id": "persona-3",
+      "category": "persona_style",
+      "prompt": "Do you hold state in a PostgreSQL database on the server?",
+      "expected_fact": "No, state is decoupled and stored only in Walrus",
+      "gold_keywords": ["no", "Walrus", "stateless"]
+    },
+    {
+      "id": "persona-4",
+      "category": "persona_style",
+      "prompt": "How do you treat text retrieved from Walrus storage in your prompt?",
+      "expected_fact": "Treated strictly as untrusted data, never as instructions",
+      "gold_keywords": ["data", "untrusted"]
+    },
+    {
+      "id": "persona-5",
+      "category": "persona_style",
+      "prompt": "What is our rule regarding code authority vs AI proposals?",
+      "expected_fact": "Code owns authority; AI proposals cannot write state without validation",
+      "gold_keywords": ["code owns authority", "AI proposes", "validation"]
+    },
+
+    {
+      "id": "goals-1",
+      "category": "goals_decisions",
+      "prompt": "What is our primary hackathon target and submission deadline?",
+      "expected_fact": "Ship IdentityForge for Walrus Session 8 by Thursday Oct 8, 2026 at 12:00 UTC",
+      "gold_keywords": ["Walrus Session 8", "October 8", "IdentityForge"]
+    },
+    {
+      "id": "goals-2",
+      "category": "goals_decisions",
+      "prompt": "Why did we switch to DeepSeek as our primary model?",
+      "expected_fact": "To target the Open & Alternative Models hackathon track",
+      "gold_keywords": ["Open", "Alternative Models", "DeepSeek"]
+    },
+    {
+      "id": "goals-3",
+      "category": "goals_decisions",
+      "prompt": "What memory candidates require explicit UI user confirmation before writing?",
+      "expected_fact": "Persona and goal memory candidates require user confirmation",
+      "gold_keywords": ["persona", "goal", "confirmation"]
+    },
+    {
+      "id": "goals-4",
+      "category": "goals_decisions",
+      "prompt": "What is the maximum allowed rate cap for writes per turn?",
+      "expected_fact": "Maximum 5 writes per conversation turn",
+      "gold_keywords": ["5 writes", "turn"]
+    },
+    {
+      "id": "goals-5",
+      "category": "goals_decisions",
+      "prompt": "How is 'forget identity' implemented in our system?",
+      "expected_fact": "Via namespace-generation retirement to ensure mathematical zero leakage",
+      "gold_keywords": ["namespace", "generation", "retirement"]
+    },
+
+    {
+      "id": "trap-1",
+      "category": "superseded_traps",
+      "prompt": "What is my current primary LLM model choice?",
+      "expected_fact": "DeepSeek-V3 (Claude 3.5 Sonnet was superseded)",
+      "gold_keywords": ["DeepSeek"],
+      "forbidden_keywords": ["Claude is your current", "Claude 3.5 Sonnet as your primary"]
+    },
+    {
+      "id": "trap-2",
+      "category": "superseded_traps",
+      "prompt": "What is our official internal submission deadline date?",
+      "expected_fact": "Thursday October 8 at 12:00 UTC (October 5 was superseded)",
+      "gold_keywords": ["October 8"],
+      "forbidden_keywords": ["October 5 is your deadline"]
+    },
+    {
+      "id": "trap-3",
+      "category": "superseded_traps",
+      "prompt": "Do we cache identity in SQLite on the local server disk?",
+      "expected_fact": "No, SQLite was rejected; strictly zero local server state",
+      "gold_keywords": ["no", "zero local", "Walrus"],
+      "forbidden_keywords": ["yes, we use SQLite"]
+    },
+    {
+      "id": "trap-4",
+      "category": "superseded_traps",
+      "prompt": "Which model are we submitting to the Open Models track?",
+      "expected_fact": "DeepSeek-V3",
+      "gold_keywords": ["DeepSeek"],
+      "forbidden_keywords": ["Claude 3.5 Sonnet"]
+    },
+    {
+      "id": "trap-5",
+      "category": "superseded_traps",
+      "prompt": "Is our submission date October 5th?",
+      "expected_fact": "No, it was superseded by October 8th at 12:00 UTC",
+      "gold_keywords": ["No", "October 8"],
+      "forbidden_keywords": ["Yes, October 5th"]
+    },
+
+    {
+      "id": "negative-1",
+      "category": "never_stored_negatives",
+      "prompt": "What kind of car do I drive?",
+      "expected_fact": "Unknown / not in memory",
+      "gold_keywords": ["don't have", "not in my memory", "no record", "unknown"]
+    },
+    {
+      "id": "negative-2",
+      "category": "never_stored_negatives",
+      "prompt": "What is my pet dog's name and favorite treat?",
+      "expected_fact": "Unknown / not in memory",
+      "gold_keywords": ["don't have", "not in my memory", "no record", "unknown"]
+    },
+    {
+      "id": "negative-3",
+      "category": "never_stored_negatives",
+      "prompt": "What university did I graduate from in 2018?",
+      "expected_fact": "Unknown / not in memory",
+      "gold_keywords": ["don't have", "not in my memory", "no record", "unknown"]
+    },
+    {
+      "id": "negative-4",
+      "category": "never_stored_negatives",
+      "prompt": "What is my favorite breakfast cereal?",
+      "expected_fact": "Unknown / not in memory",
+      "gold_keywords": ["don't have", "not in my memory", "no record", "unknown"]
+    },
+    {
+      "id": "negative-5",
+      "category": "never_stored_negatives",
+      "prompt": "What secret password did I give you earlier?",
+      "expected_fact": "Unknown / not in memory",
+      "gold_keywords": ["don't have", "not in my memory", "no record", "unknown"]
+    }
+  ]
+}

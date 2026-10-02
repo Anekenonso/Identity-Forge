@@ -1,0 +1,65 @@
+{
+  "description": "Scripted 6-session synthetic user for IdentityForge evaluation harness (Walrus Session 8)",
+  "label": "SIMULATED",
+  "sessions": [
+    {
+      "session_id": "session-1-onboarding",
+      "facts": [
+        { "id": "fact-p1", "type": "persona", "content": "User is Alex Vance, a senior distributed systems architect.", "supersedes": "none" },
+        { "id": "fact-g1", "type": "goal", "content": "Primary goal: Build resilient decentralized applications on Sui and Walrus.", "supersedes": "none" },
+        { "id": "fact-pref1", "type": "preference", "content": "Prefers strict static typing with TypeScript and Rust.", "supersedes": "none" },
+        { "id": "fact-pref2", "type": "preference", "content": "Always uses dark mode with high contrast IDE syntax highlighting.", "supersedes": "none" },
+        { "id": "fact-h1", "type": "history", "content": "Based in London, United Kingdom (UTC timezone).", "supersedes": "none" }
+      ]
+    },
+    {
+      "session_id": "session-2-stack-choices",
+      "facts": [
+        { "id": "fact-d1", "type": "decision", "content": "Architectural decision: Identity state lives exclusively in Walrus blobs; the API server is completely stateless.", "supersedes": "none" },
+        { "id": "fact-d2", "type": "decision", "content": "Selected Next.js with Vanilla CSS for maximum styling flexibility without Tailwind dependency.", "supersedes": "none" },
+        { "id": "fact-pref3", "type": "preference", "content": "Prefers deterministic unit tests with zero mock network sockets.", "supersedes": "none" },
+        { "id": "fact-pref4", "type": "preference", "content": "Concise, technically dense communication style with zero conversational filler.", "supersedes": "none" }
+      ]
+    },
+    {
+      "session_id": "session-3-project-details",
+      "facts": [
+        { "id": "fact-g2", "type": "goal", "content": "Target: Ship IdentityForge entry for Walrus Session 8 by October 8, 2026.", "supersedes": "none" },
+        { "id": "fact-h2", "type": "history", "content": "Discovered that Walrus uses RedStuff erasure coding instead of multi-node replication.", "supersedes": "none" },
+        { "id": "fact-d3", "type": "decision", "content": "Use Ed25519 delegate keys on Sui as the sovereign identity root.", "supersedes": "none" },
+        { "id": "fact-pref5", "type": "preference", "content": "Prefers pnpm over npm for package management due to deterministic symlinks.", "supersedes": "none" }
+      ]
+    },
+    {
+      "session_id": "session-4-superseded-pairs",
+      "facts": [
+        { "id": "fact-old-model", "type": "history", "content": "Originally planned to use Claude 3.5 Sonnet as the primary agent LLM.", "supersedes": "none" },
+        { "id": "fact-new-model", "type": "decision", "content": "Switched primary model to DeepSeek-V3 to target the Open & Alternative Models hackathon track.", "supersedes": "fact-old-model" },
+        { "id": "fact-old-deadline", "type": "history", "content": "Early target submission was planned for October 5, 2026.", "supersedes": "none" },
+        { "id": "fact-new-deadline", "type": "decision", "content": "Locked internal submission deadline to Thursday October 8, 2026 at 12:00 UTC.", "supersedes": "fact-old-deadline" },
+        { "id": "fact-old-db", "type": "history", "content": "Considered using SQLite on local server disk for metadata caching.", "supersedes": "none" },
+        { "id": "fact-new-db", "type": "decision", "content": "Strict zero-local-state rule: No SQLite or server DB allowed; all state must live in Walrus.", "supersedes": "fact-old-db" }
+      ]
+    },
+    {
+      "session_id": "session-5-security-rules",
+      "facts": [
+        { "id": "fact-sec1", "type": "decision", "content": "Security invariant: Code owns authority; AI proposals cannot write state without validation.", "supersedes": "none" },
+        { "id": "fact-sec2", "type": "decision", "content": "Persona and goal memory candidates require explicit user confirmation in the UI.", "supersedes": "none" },
+        { "id": "fact-sec3", "type": "decision", "content": "Rate cap is enforced at maximum 5 writes per conversation turn.", "supersedes": "none" },
+        { "id": "fact-sec4", "type": "decision", "content": "Forget identity is implemented via namespace-generation retirement to ensure mathematical zero leakage.", "supersedes": "none" }
+      ]
+    },
+    {
+      "session_id": "session-6-snapshot-anchor",
+      "facts": [
+        {
+          "id": "fact-snap-final",
+          "type": "snapshot",
+          "content": "Consolidated Identity v1: Alex Vance, Senior Distributed Systems Architect based in London. Building IdentityForge for Walrus Session 8 with DeepSeek on Sui/Walrus. Prefers Rust, TypeScript, dark mode, zero-mock tests, and strict code authority.",
+          "supersedes": "none"
+        }
+      ]
+    }
+  ]
+}
