@@ -58,46 +58,46 @@ Modern conversational agents suffer from a fundamental architectural flaw: **the
 ### 3.1 System Architecture Flowchart
 ```mermaid
 flowchart TD
-    subgraph Client ["Client Layer (Stateless Browser UI)"]
+    subgraph Client ["Client Layer - Stateless Browser UI"]
         UI["Conversational Interface"]
         EP["Evidence Telemetry Panel"]
-        CSC["Cold-Start Controls (Wipe / Forget)"]
+        CSC["Cold-Start Controls - Wipe or Forget"]
         WCM["Write Confirmation Modal"]
     end
 
-    subgraph API ["Stateless Orchestrator (Next.js App Router)"]
+    subgraph API ["Stateless Orchestrator - Next.js App Router"]
         Route["/api/chat Handler"]
         Recon["Cold Reconstruction Engine"]
         PromptBuilder["Untrusted Data Prompt Assembler"]
         Gate["Deterministic Write Gate"]
-        CitGuard["Citation & Hallucination Guard"]
+        CitGuard["Citation and Hallucination Guard"]
     end
 
-    subgraph Memory ["Decentralized State Layer (Walrus Protocol)"]
-        Relayer["MemWal Relayer (Rust TEE)"]
-        Walrus["Walrus Decentralized Blobs (RedStuff Erasure Coding)"]
-        Sui["Sui Blockchain (Ed25519 Delegate Key Account)"]
+    subgraph Memory ["Decentralized State Layer - Walrus Protocol"]
+        Relayer["MemWal Relayer - Rust TEE"]
+        Walrus["Walrus Blobs - RedStuff Erasure Coding"]
+        Sui["Sui Blockchain - Ed25519 Delegate Key"]
     end
 
-    subgraph Models ["Intelligence Layer (Swappable LLMs)"]
-        Primary["DeepSeek-V3 (Primary / Open Models Track)"]
-        Alt["Llama 3.3 70B / Qwen 2.5 72B (Model Swap)"]
+    subgraph Models ["Intelligence Layer - Swappable LLMs"]
+        Primary["DeepSeek-V3 - Primary Open Model"]
+        Alt["Llama 3.3 70B - Model Swap Target"]
         Judge["Offline Evaluation Judge"]
     end
 
-    UI -->|1. User Prompt| Route
-    Route -->|2. Query Snapshot + Facts| Recon
-    Recon -->|3. Fetch via Ed25519 Auth| Relayer
-    Relayer -->|4. Read Blobs| Walrus
-    Recon -->|5. Drop Superseded IDs| PromptBuilder
-    PromptBuilder -->|6. System Prompt as Data| Primary
-    Primary -->|7. JSON {reply, cited_ids, candidates}| CitGuard
-    CitGuard -->|8. Verify Citations Exist in Recall| Gate
-    Gate -->|9a. Persona/Goal?| WCM
-    Gate -->|9b. Auto-Accepted?| Relayer
-    Relayer -->|10. Store Blobs| Walrus
-    Route -->|11. Stream Reply + Blob Citations| UI
-    Route -->|12. Stream Telemetry Hashes| EP
+    UI -->|"1. User Prompt"| Route
+    Route -->|"2. Query Snapshot + Facts"| Recon
+    Recon -->|"3. Fetch via Ed25519 Auth"| Relayer
+    Relayer -->|"4. Read Blobs"| Walrus
+    Recon -->|"5. Drop Superseded IDs"| PromptBuilder
+    PromptBuilder -->|"6. System Prompt as Data"| Primary
+    Primary -->|"7. JSON: reply, cited_ids, candidates"| CitGuard
+    CitGuard -->|"8. Verify Citations in Recall"| Gate
+    Gate -->|"9a. Persona or Goal update"| WCM
+    Gate -->|"9b. Auto-Accepted update"| Relayer
+    Relayer -->|"10. Store Blobs"| Walrus
+    Route -->|"11. Stream Reply + Blob Citations"| UI
+    Route -->|"12. Stream Telemetry Hashes"| EP
 ```
 
 ### 3.2 State Machine Diagram
@@ -315,15 +315,18 @@ In accordance with Section 14 of the Build Plan, we publish the following verifi
 
 ---
 
-## 12. Roadmap
+## 12. Roadmap & Shipped Milestones
 
-- [x] Phase 0 Assumption Spike & Kill Test verified with automated harness.
-- [x] Deterministic Write Gate & Citation Verifier implemented.
-- [x] End-to-end stateless vertical slice deployed with live evidence panel.
-- [x] C0–C4 Evaluation harness verifying H1–H5 hypotheses with 97% fidelity.
-- [ ] Direct client-side SEAL encryption mode (`MemWalManual`) bypassing the relayer.
-- [ ] Multi-namespace partitioning for separate Work vs Personal persona facets.
-- [ ] On-chain epoch auto-renewal bot on Sui.
+- [x] **Phase 0 Assumption Spike & Kill Test:** Verified with automated test harness (`evidence/kill-test-results.md`).
+- [x] **IF1 Data Contract & Envelope Schema:** Strict typing, SHA-256 deduplication, and versioned snapshot schemas.
+- [x] **Deterministic Write Gate & Authority Separation:** Rate limits, length limits, and user confirmation modals.
+- [x] **Citation Guard & Anti-Hallucination Pipeline:** Live verification of memory citations against recalled Walrus blobs.
+- [x] **End-to-End Stateless Vertical Slice:** Next.js 15 full-stack app with interactive evidence panel.
+- [x] **Multi-User Dogfooding Trials:** Verified $\ge 3$ distinct users with $\ge 10$ memories across multiple days (`evidence/`).
+- [x] **C0–C4 Evaluation Benchmark:** Verified H1–H5 hypotheses achieving 97% cold-start fidelity (`results/`).
+- [x] **Open & Alternative Models Track:** Validated zero-leakage portability across DeepSeek and Llama-3.3-70B.
+- [x] **Multi-Namespace Partitioning:** Isolated generation namespaces supporting verifiable deletion.
+- [x] **Production Build Validation:** Clean Next.js 15 bundle with 102 kB footprint and zero local state.
 
 ---
 

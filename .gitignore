@@ -36,3 +36,6 @@ next-env.d.ts
 # worksheets & internal planning
 IdentityForge_Project_Worksheet.md
 *_Project_Worksheet.md
+IdentityForge_Build_Plan*.md
+*_Build_Plan*.md
+*build_plan*.md
