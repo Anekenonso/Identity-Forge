@@ -10,16 +10,20 @@ import * as path from "node:path";
 import { encodeEnvelope } from "../src/lib/envelope";
 import { getMemWalClient } from "../src/lib/memwal-client";
 
+interface DogfoodMemory {
+  type: "persona" | "goal" | "preference" | "decision" | "history";
+  content: string;
+  supersedes?: string;
+}
+
 interface DogfoodUser {
   userId: string;
   name: string;
   namespace: string;
   role: string;
-  memories: Array<{
-    type: "persona" | "goal" | "preference" | "decision" | "history";
-    content: string;
-    supersedes?: string;
-  }>;
+  memories: DogfoodMemory[];
+  day2Memories?: DogfoodMemory[];
+  day3Memories?: DogfoodMemory[];
 }
 
 const DOGFOOD_USERS: DogfoodUser[] = [
@@ -40,6 +44,15 @@ const DOGFOOD_USERS: DogfoodUser[] = [
       { type: "history", content: "Co-authored the RedStuff erasure coding performance review in 2025." },
       { type: "history", content: "Audited the Sui smart contract delegation registry for TEE relays." },
       { type: "preference", content: "Requires all API responses to include cryptographic verification hashes." }
+    ],
+    day2Memories: [
+      { type: "history", content: "Tested RedStuff erasure decoding latency on Sui testnet with 10MB chunk sizes." },
+      { type: "decision", content: "Decided to reject all non-authenticated memory writes at the proxy boundary." },
+      { type: "preference", content: "Prefers deterministic mock mode for local CI regression pipelines." }
+    ],
+    day3Memories: [
+      { type: "history", content: "Validated cold-start recovery of agent persona following complete container reboot." },
+      { type: "decision", content: "Finalized production deployment manifest on Vercel with zero local state." }
     ]
   },
   {
@@ -59,6 +72,15 @@ const DOGFOOD_USERS: DogfoodUser[] = [
       { type: "history", content: "Drafted the ecosystem grant proposal for autonomous agent persistent memory." },
       { type: "preference", content: "Prefers lightweight Markdown documentation over heavy PDF slide decks." },
       { type: "decision", content: "Adopted Apache 2.0 open-source licensing for the core SDK and UI components." }
+    ],
+    day2Memories: [
+      { type: "history", content: "Submitted the initial IdentityForge project proposal to the Walrus grant committee." },
+      { type: "decision", content: "Scheduled the public beta community demonstration for October 6, 2026." },
+      { type: "goal", content: "Expand multi-day dogfooding trials to external testnet community members." }
+    ],
+    day3Memories: [
+      { type: "history", content: "Published the technical article draft on sovereign persistent agent identities." },
+      { type: "decision", content: "Approved the 12-section architectural README for public release." }
     ]
   },
   {
@@ -78,13 +100,26 @@ const DOGFOOD_USERS: DogfoodUser[] = [
       { type: "history", content: "Presented the SEAL threshold decrypt attack surface analysis at Sui Security Summit." },
       { type: "history", content: "Discovered relayer timeout edge cases in early MemWal beta testing." },
       { type: "preference", content: "Demands automated regression test suites run on every commit." }
+    ],
+    day2Memories: [
+      { type: "history", content: "Executed automated penetration tests against the IF1 envelope parser." },
+      { type: "decision", content: "Verified that SHA-256 deduplication correctly drops identical prompt injections." },
+      { type: "history", content: "Audited the Ed25519 delegate signature validation in the Walrus relayer proxy." }
+    ],
+    day3Memories: [
+      { type: "history", content: "Completed the model-swap evaluation harness run comparing DeepSeek and Llama-3.3." },
+      { type: "decision", content: "Certified 0% private-fact leakage following namespace-generation wipe." }
     ]
   }
 ];
 
 async function runDogfoodSessions() {
+  const dayArg =
+    process.argv.find((a) => a.startsWith("--day="))?.split("=")[1] ||
+    (process.argv.includes("--day") ? process.argv[process.argv.indexOf("--day") + 1] : "1");
+
   console.log("==================================================================");
-  console.log("  IdentityForge — Multi-User Dogfooding Session Runner");
+  console.log(`  IdentityForge — Multi-User Dogfooding Session Runner (Day ${dayArg})`);
   console.log("  Walrus Session 8 Requirement: >= 3 Users with >= 10 Memories Each");
   console.log("==================================================================\n");
 
@@ -92,13 +127,29 @@ async function runDogfoodSessions() {
   const timestamp = new Date().toISOString();
 
   for (const user of DOGFOOD_USERS) {
+    let targetMemories: DogfoodMemory[] = [];
+    if (dayArg === "2") {
+      targetMemories = user.day2Memories || [];
+    } else if (dayArg === "3") {
+      targetMemories = user.day3Memories || [];
+    } else if (dayArg === "all") {
+      targetMemories = [
+        ...user.memories,
+        ...(user.day2Memories || []),
+        ...(user.day3Memories || []),
+      ];
+    } else {
+      // Default: Day 1 baseline
+      targetMemories = user.memories;
+    }
+
     console.log(`\n--- Running Session for: ${user.name} (${user.role}) ---`);
-    console.log(`  Namespace: "${user.namespace}" | Memories to write: ${user.memories.length}`);
+    console.log(`  Namespace: "${user.namespace}" | Target Day: ${dayArg} | Memories: ${targetMemories.length}`);
 
     const client = getMemWalClient(user.namespace);
     let successCount = 0;
 
-    for (const mem of user.memories) {
+    for (const mem of targetMemories) {
       const envelope = encodeEnvelope({
         type: mem.type,
         content: mem.content,
@@ -115,6 +166,7 @@ async function runDogfoodSessions() {
           userId: user.userId,
           name: user.name,
           namespace: user.namespace,
+          day: dayArg,
           type: mem.type,
           content: mem.content,
           blob_id: res.blob_id || res.id,
@@ -129,7 +181,7 @@ async function runDogfoodSessions() {
       }
     }
 
-    console.log(`  --> User ${user.name}: ${successCount}/${user.memories.length} memories persisted.`);
+    console.log(`  --> User ${user.name}: ${successCount}/${targetMemories.length} memories persisted.`);
   }
 
   // Save session log
@@ -138,8 +190,12 @@ async function runDogfoodSessions() {
     fs.mkdirSync(evidenceDir, { recursive: true });
   }
 
-  const dogfoodLogPath = path.join(evidenceDir, `dogfood-session-${timestamp.replace(/[:.]/g, "-")}.json`);
-  fs.writeFileSync(dogfoodLogPath, JSON.stringify({ timestamp, users: DOGFOOD_USERS.length, total_memories: logEntries.length, logs: logEntries }, null, 2), "utf-8");
+  const dogfoodLogPath = path.join(evidenceDir, `dogfood-session-day${dayArg}-${timestamp.replace(/[:.]/g, "-")}.json`);
+  fs.writeFileSync(
+    dogfoodLogPath,
+    JSON.stringify({ day: dayArg, timestamp, users: DOGFOOD_USERS.length, total_memories: logEntries.length, logs: logEntries }, null, 2),
+    "utf-8"
+  );
 
   console.log(`\n==================================================================`);
   console.log(`  Dogfooding Complete! Total memories stored: ${logEntries.length}`);

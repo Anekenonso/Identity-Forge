@@ -1,0 +1,107 @@
+{
+  "day": "2",
+  "timestamp": "2026-10-02T19:04:37.269Z",
+  "users": 3,
+  "total_memories": 9,
+  "logs": [
+    {
+      "userId": "user-alex-vance",
+      "name": "Alex Vance",
+      "namespace": "user-alex",
+      "day": "2",
+      "type": "history",
+      "content": "Tested RedStuff erasure decoding latency on Sui testnet with 10MB chunk sizes.",
+      "blob_id": "mock-blob-000001",
+      "latency_ms": 1,
+      "timestamp": "2026-10-02T19:04:37.273Z"
+    },
+    {
+      "userId": "user-alex-vance",
+      "name": "Alex Vance",
+      "namespace": "user-alex",
+      "day": "2",
+      "type": "decision",
+      "content": "Decided to reject all non-authenticated memory writes at the proxy boundary.",
+      "blob_id": "mock-blob-000002",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T19:04:37.273Z"
+    },
+    {
+      "userId": "user-alex-vance",
+      "name": "Alex Vance",
+      "namespace": "user-alex",
+      "day": "2",
+      "type": "preference",
+      "content": "Prefers deterministic mock mode for local CI regression pipelines.",
+      "blob_id": "mock-blob-000003",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T19:04:37.273Z"
+    },
+    {
+      "userId": "user-elena-rostova",
+      "name": "Elena Rostova",
+      "namespace": "user-elena",
+      "day": "2",
+      "type": "history",
+      "content": "Submitted the initial IdentityForge project proposal to the Walrus grant committee.",
+      "blob_id": "mock-blob-000004",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T19:04:37.273Z"
+    },
+    {
+      "userId": "user-elena-rostova",
+      "name": "Elena Rostova",
+      "namespace": "user-elena",
+      "day": "2",
+      "type": "decision",
+      "content": "Scheduled the public beta community demonstration for October 6, 2026.",
+      "blob_id": "mock-blob-000005",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T19:04:37.273Z"
+    },
+    {
+      "userId": "user-elena-rostova",
+      "name": "Elena Rostova",
+      "namespace": "user-elena",
+      "day": "2",
+      "type": "goal",
+      "content": "Expand multi-day dogfooding trials to external testnet community members.",
+      "blob_id": "mock-blob-000006",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T19:04:37.273Z"
+    },
+    {
+      "userId": "user-marcus-chen",
+      "name": "Marcus Chen",
+      "namespace": "user-marcus",
+      "day": "2",
+      "type": "history",
+      "content": "Executed automated penetration tests against the IF1 envelope parser.",
+      "blob_id": "mock-blob-000007",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T19:04:37.274Z"
+    },
+    {
+      "userId": "user-marcus-chen",
+      "name": "Marcus Chen",
+      "namespace": "user-marcus",
+      "day": "2",
+      "type": "decision",
+      "content": "Verified that SHA-256 deduplication correctly drops identical prompt injections.",
+      "blob_id": "mock-blob-000008",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T19:04:37.274Z"
+    },
+    {
+      "userId": "user-marcus-chen",
+      "name": "Marcus Chen",
+      "namespace": "user-marcus",
+      "day": "2",
+      "type": "history",
+      "content": "Audited the Ed25519 delegate signature validation in the Walrus relayer proxy.",
+      "blob_id": "mock-blob-000009",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T19:04:37.274Z"
+    }
+  ]
+}

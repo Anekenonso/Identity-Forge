@@ -1,0 +1,74 @@
+{
+  "day": "3",
+  "timestamp": "2026-10-02T19:04:41.759Z",
+  "users": 3,
+  "total_memories": 6,
+  "logs": [
+    {
+      "userId": "user-alex-vance",
+      "name": "Alex Vance",
+      "namespace": "user-alex",
+      "day": "3",
+      "type": "history",
+      "content": "Validated cold-start recovery of agent persona following complete container reboot.",
+      "blob_id": "mock-blob-000001",
+      "latency_ms": 1,
+      "timestamp": "2026-10-02T19:04:41.763Z"
+    },
+    {
+      "userId": "user-alex-vance",
+      "name": "Alex Vance",
+      "namespace": "user-alex",
+      "day": "3",
+      "type": "decision",
+      "content": "Finalized production deployment manifest on Vercel with zero local state.",
+      "blob_id": "mock-blob-000002",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T19:04:41.763Z"
+    },
+    {
+      "userId": "user-elena-rostova",
+      "name": "Elena Rostova",
+      "namespace": "user-elena",
+      "day": "3",
+      "type": "history",
+      "content": "Published the technical article draft on sovereign persistent agent identities.",
+      "blob_id": "mock-blob-000003",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T19:04:41.764Z"
+    },
+    {
+      "userId": "user-elena-rostova",
+      "name": "Elena Rostova",
+      "namespace": "user-elena",
+      "day": "3",
+      "type": "decision",
+      "content": "Approved the 12-section architectural README for public release.",
+      "blob_id": "mock-blob-000004",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T19:04:41.764Z"
+    },
+    {
+      "userId": "user-marcus-chen",
+      "name": "Marcus Chen",
+      "namespace": "user-marcus",
+      "day": "3",
+      "type": "history",
+      "content": "Completed the model-swap evaluation harness run comparing DeepSeek and Llama-3.3.",
+      "blob_id": "mock-blob-000005",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T19:04:41.764Z"
+    },
+    {
+      "userId": "user-marcus-chen",
+      "name": "Marcus Chen",
+      "namespace": "user-marcus",
+      "day": "3",
+      "type": "decision",
+      "content": "Certified 0% private-fact leakage following namespace-generation wipe.",
+      "blob_id": "mock-blob-000006",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T19:04:41.764Z"
+    }
+  ]
+}
