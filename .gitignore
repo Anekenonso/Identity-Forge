@@ -39,3 +39,12 @@ IdentityForge_Project_Worksheet.md
 IdentityForge_Build_Plan*.md
 *_Build_Plan*.md
 *build_plan*.md
+
+# credentials & untracked keys
+keys-untracked/
+*keys-untracked*
+*untracked*
+*.key
+*.pem
+*.secret
+

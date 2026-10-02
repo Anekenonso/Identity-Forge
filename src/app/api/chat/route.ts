@@ -134,3 +134,27 @@ export async function POST(req: Request) {
     );
   }
 }
+
+export async function GET(req: Request) {
+  try {
+    const { searchParams } = new URL(req.url);
+    const namespace = searchParams.get("namespace") || process.env.MEMWAL_NAMESPACE || "identity";
+    const query = searchParams.get("query") || "identity persona goals preferences";
+
+    const reconstruction = await reconstructIdentity(query, namespace);
+
+    return NextResponse.json({
+      snapshot: reconstruction.snapshot,
+      facts: reconstruction.effectiveFacts,
+      evidence: reconstruction.evidence,
+      isEmpty: reconstruction.isEmpty,
+      namespace,
+    });
+  } catch (error: any) {
+    console.error("API /api/chat GET error:", error);
+    return NextResponse.json(
+      { error: "Failed to reconstruct state", message: error.message },
+      { status: 500 }
+    );
+  }
+}
