@@ -7,11 +7,11 @@
 import "dotenv/config";
 import * as fs from "node:fs";
 import * as path from "node:path";
-import { getMemWalClient } from "../src/lib/memwal-client.js";
-import { encodeEnvelope } from "../src/lib/envelope.js";
-import { generateChatResponse } from "../src/lib/llm-client.js";
-import { buildReconstructedSystemPrompt, reconstructIdentity } from "../src/lib/reconstruct.js";
-import { verifyCitations } from "../src/lib/citation-guard.js";
+import { getMemWalClient } from "../src/lib/memwal-client";
+import { encodeEnvelope } from "../src/lib/envelope";
+import { generateChatResponse } from "../src/lib/llm-client";
+import { buildReconstructedSystemPrompt, reconstructIdentity } from "../src/lib/reconstruct";
+import { verifyCitations } from "../src/lib/citation-guard";
 
 interface ProbeResult {
   probe_id: string;

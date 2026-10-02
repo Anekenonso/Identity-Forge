@@ -4,7 +4,7 @@
  * Includes deterministic local simulation when no API key is provided.
  */
 
-import type { CandidateMemory, StructuredLLMResponse } from "./types.js";
+import type { CandidateMemory, StructuredLLMResponse } from "./types";
 
 export interface LLMRequestOptions {
   modelOverride?: string;

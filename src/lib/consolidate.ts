@@ -4,9 +4,9 @@
  * Synthesizes episodic facts into an updated versioned snapshot (v+1).
  */
 
-import { encodeEnvelope } from "./envelope.js";
-import { getMemWalClient } from "./memwal-client.js";
-import type { EvidenceLogEntry, IdentitySnapshot, RecalledFact } from "./types.js";
+import { encodeEnvelope } from "./envelope";
+import { getMemWalClient } from "./memwal-client";
+import type { EvidenceLogEntry, IdentitySnapshot, RecalledFact } from "./types";
 
 export async function consolidateIdentity(
   currentSnapshot: IdentitySnapshot | null,

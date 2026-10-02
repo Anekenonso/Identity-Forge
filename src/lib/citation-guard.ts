@@ -4,7 +4,7 @@
  * Validates that memory claims in the assistant reply cite valid recalled memory IDs.
  */
 
-import type { RecalledFact } from "./types.js";
+import type { RecalledFact } from "./types";
 
 export interface CitationVerificationResult {
   valid: boolean;

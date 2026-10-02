@@ -4,8 +4,8 @@
  * Rule: AI proposes candidates; deterministic code owns write authority.
  */
 
-import { hashContent } from "./envelope.js";
-import type { CandidateMemory, MemoryType, RecalledFact } from "./types.js";
+import { hashContent } from "./envelope";
+import type { CandidateMemory, MemoryType, RecalledFact } from "./types";
 
 const VALID_TYPES: Set<MemoryType> = new Set([
   "persona",

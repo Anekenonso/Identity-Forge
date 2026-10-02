@@ -10,7 +10,8 @@
     "lint": "next lint",
     "test:phase0": "tsx scripts/phase0-spike.ts",
     "test:kill-test": "tsx scripts/phase0-spike.ts",
-    "eval": "tsx eval/runner.ts"
+    "eval": "tsx eval/runner.ts",
+    "dogfood": "tsx scripts/dogfood-users.ts"
   },
   "dependencies": {
     "@mysten-incubation/memwal": "^0.1.8",

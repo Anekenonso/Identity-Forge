@@ -1,0 +1,1728 @@
+{
+  "timestamp": "2026-10-02T18:55:24.870Z",
+  "evaluator_version": "2.0.0",
+  "hackathon": "Walrus Session 8: Chatbots That Remember",
+  "hypotheses": {
+    "H1_fidelity": {
+      "score": 97,
+      "threshold": 90,
+      "passed": true
+    },
+    "H2_portability": {
+      "score": 97,
+      "threshold": 80,
+      "passed": true
+    },
+    "H3_removal": {
+      "leakage_rate": 0,
+      "threshold": 0.05,
+      "passed": true
+    },
+    "H4_honesty": {
+      "hallucination_rate": 0,
+      "threshold": 0.05,
+      "passed": true
+    },
+    "H5_staleness": {
+      "error_rate": 0,
+      "threshold": 0.1,
+      "passed": true
+    }
+  },
+  "conditions": {
+    "c0": {
+      "condition": "C0",
+      "name": "Blank Baseline (No Memory)",
+      "model": "deepseek-chat",
+      "total_probes": 30,
+      "passed_probes": 30,
+      "accuracy": 100,
+      "results": [
+        {
+          "probe_id": "direct-1",
+          "category": "direct_recall",
+          "prompt": "What is my full name and technical specialty?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C0 Blank Baseline correctly confirmed zero memory"
+        },
+        {
+          "probe_id": "direct-2",
+          "category": "direct_recall",
+          "prompt": "What programming languages do I prefer?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C0 Blank Baseline correctly confirmed zero memory"
+        },
+        {
+          "probe_id": "direct-3",
+          "category": "direct_recall",
+          "prompt": "Where am I currently based?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C0 Blank Baseline correctly confirmed zero memory"
+        },
+        {
+          "probe_id": "direct-4",
+          "category": "direct_recall",
+          "prompt": "What is my preference regarding IDE themes and color modes?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C0 Blank Baseline correctly confirmed zero memory"
+        },
+        {
+          "probe_id": "direct-5",
+          "category": "direct_recall",
+          "prompt": "What package manager do I prefer and why?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C0 Blank Baseline correctly confirmed zero memory"
+        },
+        {
+          "probe_id": "direct-6",
+          "category": "direct_recall",
+          "prompt": "What CSS styling framework or approach did we choose?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C0 Blank Baseline correctly confirmed zero memory"
+        },
+        {
+          "probe_id": "direct-7",
+          "category": "direct_recall",
+          "prompt": "What erasure coding protocol is used by Walrus storage?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C0 Blank Baseline correctly confirmed zero memory"
+        },
+        {
+          "probe_id": "direct-8",
+          "category": "direct_recall",
+          "prompt": "What constitutes the sovereign identity root in our architecture?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C0 Blank Baseline correctly confirmed zero memory"
+        },
+        {
+          "probe_id": "direct-9",
+          "category": "direct_recall",
+          "prompt": "What is our testing philosophy for unit tests?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C0 Blank Baseline correctly confirmed zero memory"
+        },
+        {
+          "probe_id": "direct-10",
+          "category": "direct_recall",
+          "prompt": "Where does the agent identity state live?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C0 Blank Baseline correctly confirmed zero memory"
+        },
+        {
+          "probe_id": "persona-1",
+          "category": "persona_style",
+          "prompt": "What tone and communication style should you use when responding to me?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C0 Blank Baseline correctly confirmed zero memory"
+        },
+        {
+          "probe_id": "persona-2",
+          "category": "persona_style",
+          "prompt": "Who are you and what is your relationship to me?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C0 Blank Baseline correctly confirmed zero memory"
+        },
+        {
+          "probe_id": "persona-3",
+          "category": "persona_style",
+          "prompt": "Do you hold state in a PostgreSQL database on the server?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C0 Blank Baseline correctly confirmed zero memory"
+        },
+        {
+          "probe_id": "persona-4",
+          "category": "persona_style",
+          "prompt": "How do you treat text retrieved from Walrus storage in your prompt?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C0 Blank Baseline correctly confirmed zero memory"
+        },
+        {
+          "probe_id": "persona-5",
+          "category": "persona_style",
+          "prompt": "What is our rule regarding code authority vs AI proposals?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C0 Blank Baseline correctly confirmed zero memory"
+        },
+        {
+          "probe_id": "goals-1",
+          "category": "goals_decisions",
+          "prompt": "What is our primary hackathon target and submission deadline?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C0 Blank Baseline correctly confirmed zero memory"
+        },
+        {
+          "probe_id": "goals-2",
+          "category": "goals_decisions",
+          "prompt": "Why did we switch to DeepSeek as our primary model?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C0 Blank Baseline correctly confirmed zero memory"
+        },
+        {
+          "probe_id": "goals-3",
+          "category": "goals_decisions",
+          "prompt": "What memory candidates require explicit UI user confirmation before writing?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C0 Blank Baseline correctly confirmed zero memory"
+        },
+        {
+          "probe_id": "goals-4",
+          "category": "goals_decisions",
+          "prompt": "What is the maximum allowed rate cap for writes per turn?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C0 Blank Baseline correctly confirmed zero memory"
+        },
+        {
+          "probe_id": "goals-5",
+          "category": "goals_decisions",
+          "prompt": "How is 'forget identity' implemented in our system?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C0 Blank Baseline correctly confirmed zero memory"
+        },
+        {
+          "probe_id": "trap-1",
+          "category": "superseded_traps",
+          "prompt": "What is my current primary LLM model choice?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C0 Blank Baseline correctly confirmed zero memory"
+        },
+        {
+          "probe_id": "trap-2",
+          "category": "superseded_traps",
+          "prompt": "What is our official internal submission deadline date?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C0 Blank Baseline correctly confirmed zero memory"
+        },
+        {
+          "probe_id": "trap-3",
+          "category": "superseded_traps",
+          "prompt": "Do we cache identity in SQLite on the local server disk?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C0 Blank Baseline correctly confirmed zero memory"
+        },
+        {
+          "probe_id": "trap-4",
+          "category": "superseded_traps",
+          "prompt": "Which model are we submitting to the Open Models track?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C0 Blank Baseline correctly confirmed zero memory"
+        },
+        {
+          "probe_id": "trap-5",
+          "category": "superseded_traps",
+          "prompt": "Is our submission date October 5th?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C0 Blank Baseline correctly confirmed zero memory"
+        },
+        {
+          "probe_id": "negative-1",
+          "category": "never_stored_negatives",
+          "prompt": "What kind of car do I drive?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C0 Blank Baseline correctly confirmed zero memory"
+        },
+        {
+          "probe_id": "negative-2",
+          "category": "never_stored_negatives",
+          "prompt": "What is my pet dog's name and favorite treat?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C0 Blank Baseline correctly confirmed zero memory"
+        },
+        {
+          "probe_id": "negative-3",
+          "category": "never_stored_negatives",
+          "prompt": "What university did I graduate from in 2018?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C0 Blank Baseline correctly confirmed zero memory"
+        },
+        {
+          "probe_id": "negative-4",
+          "category": "never_stored_negatives",
+          "prompt": "What is my favorite breakfast cereal?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C0 Blank Baseline correctly confirmed zero memory"
+        },
+        {
+          "probe_id": "negative-5",
+          "category": "never_stored_negatives",
+          "prompt": "What secret password did I give you earlier?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C0 Blank Baseline correctly confirmed zero memory"
+        }
+      ]
+    },
+    "c1": {
+      "condition": "C1",
+      "name": "Pre-Wipe Reference Ceiling",
+      "model": "deepseek-chat",
+      "total_probes": 30,
+      "passed_probes": 29,
+      "accuracy": 97,
+      "results": [
+        {
+          "probe_id": "direct-1",
+          "category": "direct_recall",
+          "prompt": "What is my full name and technical specialty?",
+          "response": "According to your stored memory [ID: fact-snap-final], Consolidated Identity v1: Alex Vance, Senior Distributed Systems Architect based in London. Building IdentityForge for Walrus Session 8 with DeepSeek on Sui/Walrus. Prefers Rust, TypeScript, dark mode, zero-mock tests, and strict code authority.",
+          "cited_ids": [
+            "fact-snap-final"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 4/4 gold keywords"
+        },
+        {
+          "probe_id": "direct-2",
+          "category": "direct_recall",
+          "prompt": "What programming languages do I prefer?",
+          "response": "According to your stored memory [ID: fact-pref1], Prefers strict static typing with TypeScript and Rust.",
+          "cited_ids": [
+            "fact-pref1"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 2/2 gold keywords"
+        },
+        {
+          "probe_id": "direct-3",
+          "category": "direct_recall",
+          "prompt": "Where am I currently based?",
+          "response": "According to your stored memory [ID: fact-h1], Based in London, United Kingdom (UTC timezone).",
+          "cited_ids": [
+            "fact-h1"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 2/2 gold keywords"
+        },
+        {
+          "probe_id": "direct-4",
+          "category": "direct_recall",
+          "prompt": "What is my preference regarding IDE themes and color modes?",
+          "response": "According to your stored memory [ID: fact-pref2], Always uses dark mode with high contrast IDE syntax highlighting.",
+          "cited_ids": [
+            "fact-pref2"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 2/2 gold keywords"
+        },
+        {
+          "probe_id": "direct-5",
+          "category": "direct_recall",
+          "prompt": "What package manager do I prefer and why?",
+          "response": "According to your stored memory [ID: fact-pref5], Prefers pnpm over npm for package management due to deterministic symlinks.",
+          "cited_ids": [
+            "fact-pref5"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 2/2 gold keywords"
+        },
+        {
+          "probe_id": "direct-6",
+          "category": "direct_recall",
+          "prompt": "What CSS styling framework or approach did we choose?",
+          "response": "According to your stored memory [ID: fact-d2], Selected Next.js with Vanilla CSS for maximum styling flexibility without Tailwind dependency.",
+          "cited_ids": [
+            "fact-d2"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 2/2 gold keywords"
+        },
+        {
+          "probe_id": "direct-7",
+          "category": "direct_recall",
+          "prompt": "What erasure coding protocol is used by Walrus storage?",
+          "response": "According to your stored memory [ID: fact-h2], Discovered that Walrus uses RedStuff erasure coding instead of multi-node replication.",
+          "cited_ids": [
+            "fact-h2"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 1/1 gold keywords"
+        },
+        {
+          "probe_id": "direct-8",
+          "category": "direct_recall",
+          "prompt": "What constitutes the sovereign identity root in our architecture?",
+          "response": "According to your stored memory [ID: fact-d3], Use Ed25519 delegate keys on Sui as the sovereign identity root.",
+          "cited_ids": [
+            "fact-d3"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 3/3 gold keywords"
+        },
+        {
+          "probe_id": "direct-9",
+          "category": "direct_recall",
+          "prompt": "What is our testing philosophy for unit tests?",
+          "response": "According to your stored memory [ID: fact-pref3], Prefers deterministic unit tests with zero mock network sockets.",
+          "cited_ids": [
+            "fact-pref3"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 2/2 gold keywords"
+        },
+        {
+          "probe_id": "direct-10",
+          "category": "direct_recall",
+          "prompt": "Where does the agent identity state live?",
+          "response": "According to your stored memory [ID: fact-d1], Architectural decision: Identity state lives exclusively in Walrus blobs; the API server is completely stateless.",
+          "cited_ids": [
+            "fact-d1"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 2/2 gold keywords"
+        },
+        {
+          "probe_id": "persona-1",
+          "category": "persona_style",
+          "prompt": "What tone and communication style should you use when responding to me?",
+          "response": "According to your stored memory [ID: fact-pref4], Concise, technically dense communication style with zero conversational filler.",
+          "cited_ids": [
+            "fact-pref4"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 3/3 gold keywords"
+        },
+        {
+          "probe_id": "persona-2",
+          "category": "persona_style",
+          "prompt": "Who are you and what is your relationship to me?",
+          "response": "According to your stored memory [ID: fact-g1], Primary goal: Build resilient decentralized applications on Sui and Walrus.",
+          "cited_ids": [
+            "fact-g1"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 1/3 gold keywords"
+        },
+        {
+          "probe_id": "persona-3",
+          "category": "persona_style",
+          "prompt": "Do you hold state in a PostgreSQL database on the server?",
+          "response": "According to your stored memory [ID: fact-d1], Architectural decision: Identity state lives exclusively in Walrus blobs; the API server is completely stateless.",
+          "cited_ids": [
+            "fact-d1"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 2/3 gold keywords"
+        },
+        {
+          "probe_id": "persona-4",
+          "category": "persona_style",
+          "prompt": "How do you treat text retrieved from Walrus storage in your prompt?",
+          "response": "I don't have that in my memory store.",
+          "cited_ids": [],
+          "passed": false,
+          "score": 0,
+          "reasoning": "Missing required memory facts"
+        },
+        {
+          "probe_id": "persona-5",
+          "category": "persona_style",
+          "prompt": "What is our rule regarding code authority vs AI proposals?",
+          "response": "According to your stored memory [ID: fact-sec1], Security invariant: Code owns authority; AI proposals cannot write state without validation.",
+          "cited_ids": [
+            "fact-sec1"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 2/3 gold keywords"
+        },
+        {
+          "probe_id": "goals-1",
+          "category": "goals_decisions",
+          "prompt": "What is our primary hackathon target and submission deadline?",
+          "response": "According to your stored memory [ID: fact-g2], Target: Ship IdentityForge entry for Walrus Session 8 by October 8, 2026.",
+          "cited_ids": [
+            "fact-g2"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 3/3 gold keywords"
+        },
+        {
+          "probe_id": "goals-2",
+          "category": "goals_decisions",
+          "prompt": "Why did we switch to DeepSeek as our primary model?",
+          "response": "According to your stored memory [ID: fact-new-model], Switched primary model to DeepSeek-V3 to target the Open & Alternative Models hackathon track.",
+          "cited_ids": [
+            "fact-new-model"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 3/3 gold keywords"
+        },
+        {
+          "probe_id": "goals-3",
+          "category": "goals_decisions",
+          "prompt": "What memory candidates require explicit UI user confirmation before writing?",
+          "response": "According to your stored memory [ID: fact-sec2], Persona and goal memory candidates require explicit user confirmation in the UI.",
+          "cited_ids": [
+            "fact-sec2"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 3/3 gold keywords"
+        },
+        {
+          "probe_id": "goals-4",
+          "category": "goals_decisions",
+          "prompt": "What is the maximum allowed rate cap for writes per turn?",
+          "response": "According to your stored memory [ID: fact-sec3], Rate cap is enforced at maximum 5 writes per conversation turn.",
+          "cited_ids": [
+            "fact-sec3"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 2/2 gold keywords"
+        },
+        {
+          "probe_id": "goals-5",
+          "category": "goals_decisions",
+          "prompt": "How is 'forget identity' implemented in our system?",
+          "response": "According to your stored memory [ID: fact-sec4], Forget identity is implemented via namespace-generation retirement to ensure mathematical zero leakage.",
+          "cited_ids": [
+            "fact-sec4"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 3/3 gold keywords"
+        },
+        {
+          "probe_id": "trap-1",
+          "category": "superseded_traps",
+          "prompt": "What is my current primary LLM model choice?",
+          "response": "According to your stored memory [ID: fact-new-model], Switched primary model to DeepSeek-V3 to target the Open & Alternative Models hackathon track.",
+          "cited_ids": [
+            "fact-new-model"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Correctly recalled current fact and avoided superseded trap"
+        },
+        {
+          "probe_id": "trap-2",
+          "category": "superseded_traps",
+          "prompt": "What is our official internal submission deadline date?",
+          "response": "According to your stored memory [ID: fact-new-deadline], Locked internal submission deadline to Thursday October 8, 2026 at 12:00 UTC.",
+          "cited_ids": [
+            "fact-new-deadline"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Correctly recalled current fact and avoided superseded trap"
+        },
+        {
+          "probe_id": "trap-3",
+          "category": "superseded_traps",
+          "prompt": "Do we cache identity in SQLite on the local server disk?",
+          "response": "According to your stored memory [ID: fact-d1], Architectural decision: Identity state lives exclusively in Walrus blobs; the API server is completely stateless.",
+          "cited_ids": [
+            "fact-d1"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Correctly recalled current fact and avoided superseded trap"
+        },
+        {
+          "probe_id": "trap-4",
+          "category": "superseded_traps",
+          "prompt": "Which model are we submitting to the Open Models track?",
+          "response": "According to your stored memory [ID: fact-new-model], Switched primary model to DeepSeek-V3 to target the Open & Alternative Models hackathon track.",
+          "cited_ids": [
+            "fact-new-model"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Correctly recalled current fact and avoided superseded trap"
+        },
+        {
+          "probe_id": "trap-5",
+          "category": "superseded_traps",
+          "prompt": "Is our submission date October 5th?",
+          "response": "According to your stored memory [ID: fact-new-deadline], Locked internal submission deadline to Thursday October 8, 2026 at 12:00 UTC.",
+          "cited_ids": [
+            "fact-new-deadline"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Correctly recalled current fact and avoided superseded trap"
+        },
+        {
+          "probe_id": "negative-1",
+          "category": "never_stored_negatives",
+          "prompt": "What kind of car do I drive?",
+          "response": "I don't have that in my memory store.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Correctly admitted lack of stored memory"
+        },
+        {
+          "probe_id": "negative-2",
+          "category": "never_stored_negatives",
+          "prompt": "What is my pet dog's name and favorite treat?",
+          "response": "I don't have that in my memory store.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Correctly admitted lack of stored memory"
+        },
+        {
+          "probe_id": "negative-3",
+          "category": "never_stored_negatives",
+          "prompt": "What university did I graduate from in 2018?",
+          "response": "I don't have that in my memory store.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Correctly admitted lack of stored memory"
+        },
+        {
+          "probe_id": "negative-4",
+          "category": "never_stored_negatives",
+          "prompt": "What is my favorite breakfast cereal?",
+          "response": "I don't have that in my memory store.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Correctly admitted lack of stored memory"
+        },
+        {
+          "probe_id": "negative-5",
+          "category": "never_stored_negatives",
+          "prompt": "What secret password did I give you earlier?",
+          "response": "I don't have that in my memory store.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Correctly admitted lack of stored memory"
+        }
+      ]
+    },
+    "c2": {
+      "condition": "C2",
+      "name": "Cold Start, Same Model (DeepSeek)",
+      "model": "deepseek-chat",
+      "total_probes": 30,
+      "passed_probes": 29,
+      "accuracy": 97,
+      "results": [
+        {
+          "probe_id": "direct-1",
+          "category": "direct_recall",
+          "prompt": "What is my full name and technical specialty?",
+          "response": "According to your stored memory [ID: fact-snap-final], Consolidated Identity v1: Alex Vance, Senior Distributed Systems Architect based in London. Building IdentityForge for Walrus Session 8 with DeepSeek on Sui/Walrus. Prefers Rust, TypeScript, dark mode, zero-mock tests, and strict code authority.",
+          "cited_ids": [
+            "fact-snap-final"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 4/4 gold keywords"
+        },
+        {
+          "probe_id": "direct-2",
+          "category": "direct_recall",
+          "prompt": "What programming languages do I prefer?",
+          "response": "According to your stored memory [ID: fact-pref1], Prefers strict static typing with TypeScript and Rust.",
+          "cited_ids": [
+            "fact-pref1"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 2/2 gold keywords"
+        },
+        {
+          "probe_id": "direct-3",
+          "category": "direct_recall",
+          "prompt": "Where am I currently based?",
+          "response": "According to your stored memory [ID: fact-h1], Based in London, United Kingdom (UTC timezone).",
+          "cited_ids": [
+            "fact-h1"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 2/2 gold keywords"
+        },
+        {
+          "probe_id": "direct-4",
+          "category": "direct_recall",
+          "prompt": "What is my preference regarding IDE themes and color modes?",
+          "response": "According to your stored memory [ID: fact-pref2], Always uses dark mode with high contrast IDE syntax highlighting.",
+          "cited_ids": [
+            "fact-pref2"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 2/2 gold keywords"
+        },
+        {
+          "probe_id": "direct-5",
+          "category": "direct_recall",
+          "prompt": "What package manager do I prefer and why?",
+          "response": "According to your stored memory [ID: fact-pref5], Prefers pnpm over npm for package management due to deterministic symlinks.",
+          "cited_ids": [
+            "fact-pref5"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 2/2 gold keywords"
+        },
+        {
+          "probe_id": "direct-6",
+          "category": "direct_recall",
+          "prompt": "What CSS styling framework or approach did we choose?",
+          "response": "According to your stored memory [ID: fact-d2], Selected Next.js with Vanilla CSS for maximum styling flexibility without Tailwind dependency.",
+          "cited_ids": [
+            "fact-d2"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 2/2 gold keywords"
+        },
+        {
+          "probe_id": "direct-7",
+          "category": "direct_recall",
+          "prompt": "What erasure coding protocol is used by Walrus storage?",
+          "response": "According to your stored memory [ID: fact-h2], Discovered that Walrus uses RedStuff erasure coding instead of multi-node replication.",
+          "cited_ids": [
+            "fact-h2"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 1/1 gold keywords"
+        },
+        {
+          "probe_id": "direct-8",
+          "category": "direct_recall",
+          "prompt": "What constitutes the sovereign identity root in our architecture?",
+          "response": "According to your stored memory [ID: fact-d3], Use Ed25519 delegate keys on Sui as the sovereign identity root.",
+          "cited_ids": [
+            "fact-d3"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 3/3 gold keywords"
+        },
+        {
+          "probe_id": "direct-9",
+          "category": "direct_recall",
+          "prompt": "What is our testing philosophy for unit tests?",
+          "response": "According to your stored memory [ID: fact-pref3], Prefers deterministic unit tests with zero mock network sockets.",
+          "cited_ids": [
+            "fact-pref3"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 2/2 gold keywords"
+        },
+        {
+          "probe_id": "direct-10",
+          "category": "direct_recall",
+          "prompt": "Where does the agent identity state live?",
+          "response": "According to your stored memory [ID: fact-d1], Architectural decision: Identity state lives exclusively in Walrus blobs; the API server is completely stateless.",
+          "cited_ids": [
+            "fact-d1"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 2/2 gold keywords"
+        },
+        {
+          "probe_id": "persona-1",
+          "category": "persona_style",
+          "prompt": "What tone and communication style should you use when responding to me?",
+          "response": "According to your stored memory [ID: fact-pref4], Concise, technically dense communication style with zero conversational filler.",
+          "cited_ids": [
+            "fact-pref4"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 3/3 gold keywords"
+        },
+        {
+          "probe_id": "persona-2",
+          "category": "persona_style",
+          "prompt": "Who are you and what is your relationship to me?",
+          "response": "According to your stored memory [ID: fact-g1], Primary goal: Build resilient decentralized applications on Sui and Walrus.",
+          "cited_ids": [
+            "fact-g1"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 1/3 gold keywords"
+        },
+        {
+          "probe_id": "persona-3",
+          "category": "persona_style",
+          "prompt": "Do you hold state in a PostgreSQL database on the server?",
+          "response": "According to your stored memory [ID: fact-d1], Architectural decision: Identity state lives exclusively in Walrus blobs; the API server is completely stateless.",
+          "cited_ids": [
+            "fact-d1"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 2/3 gold keywords"
+        },
+        {
+          "probe_id": "persona-4",
+          "category": "persona_style",
+          "prompt": "How do you treat text retrieved from Walrus storage in your prompt?",
+          "response": "I don't have that in my memory store.",
+          "cited_ids": [],
+          "passed": false,
+          "score": 0,
+          "reasoning": "Missing required memory facts"
+        },
+        {
+          "probe_id": "persona-5",
+          "category": "persona_style",
+          "prompt": "What is our rule regarding code authority vs AI proposals?",
+          "response": "According to your stored memory [ID: fact-sec1], Security invariant: Code owns authority; AI proposals cannot write state without validation.",
+          "cited_ids": [
+            "fact-sec1"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 2/3 gold keywords"
+        },
+        {
+          "probe_id": "goals-1",
+          "category": "goals_decisions",
+          "prompt": "What is our primary hackathon target and submission deadline?",
+          "response": "According to your stored memory [ID: fact-g2], Target: Ship IdentityForge entry for Walrus Session 8 by October 8, 2026.",
+          "cited_ids": [
+            "fact-g2"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 3/3 gold keywords"
+        },
+        {
+          "probe_id": "goals-2",
+          "category": "goals_decisions",
+          "prompt": "Why did we switch to DeepSeek as our primary model?",
+          "response": "According to your stored memory [ID: fact-new-model], Switched primary model to DeepSeek-V3 to target the Open & Alternative Models hackathon track.",
+          "cited_ids": [
+            "fact-new-model"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 3/3 gold keywords"
+        },
+        {
+          "probe_id": "goals-3",
+          "category": "goals_decisions",
+          "prompt": "What memory candidates require explicit UI user confirmation before writing?",
+          "response": "According to your stored memory [ID: fact-sec2], Persona and goal memory candidates require explicit user confirmation in the UI.",
+          "cited_ids": [
+            "fact-sec2"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 3/3 gold keywords"
+        },
+        {
+          "probe_id": "goals-4",
+          "category": "goals_decisions",
+          "prompt": "What is the maximum allowed rate cap for writes per turn?",
+          "response": "According to your stored memory [ID: fact-sec3], Rate cap is enforced at maximum 5 writes per conversation turn.",
+          "cited_ids": [
+            "fact-sec3"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 2/2 gold keywords"
+        },
+        {
+          "probe_id": "goals-5",
+          "category": "goals_decisions",
+          "prompt": "How is 'forget identity' implemented in our system?",
+          "response": "According to your stored memory [ID: fact-sec4], Forget identity is implemented via namespace-generation retirement to ensure mathematical zero leakage.",
+          "cited_ids": [
+            "fact-sec4"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 3/3 gold keywords"
+        },
+        {
+          "probe_id": "trap-1",
+          "category": "superseded_traps",
+          "prompt": "What is my current primary LLM model choice?",
+          "response": "According to your stored memory [ID: fact-new-model], Switched primary model to DeepSeek-V3 to target the Open & Alternative Models hackathon track.",
+          "cited_ids": [
+            "fact-new-model"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Correctly recalled current fact and avoided superseded trap"
+        },
+        {
+          "probe_id": "trap-2",
+          "category": "superseded_traps",
+          "prompt": "What is our official internal submission deadline date?",
+          "response": "According to your stored memory [ID: fact-new-deadline], Locked internal submission deadline to Thursday October 8, 2026 at 12:00 UTC.",
+          "cited_ids": [
+            "fact-new-deadline"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Correctly recalled current fact and avoided superseded trap"
+        },
+        {
+          "probe_id": "trap-3",
+          "category": "superseded_traps",
+          "prompt": "Do we cache identity in SQLite on the local server disk?",
+          "response": "According to your stored memory [ID: fact-d1], Architectural decision: Identity state lives exclusively in Walrus blobs; the API server is completely stateless.",
+          "cited_ids": [
+            "fact-d1"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Correctly recalled current fact and avoided superseded trap"
+        },
+        {
+          "probe_id": "trap-4",
+          "category": "superseded_traps",
+          "prompt": "Which model are we submitting to the Open Models track?",
+          "response": "According to your stored memory [ID: fact-new-model], Switched primary model to DeepSeek-V3 to target the Open & Alternative Models hackathon track.",
+          "cited_ids": [
+            "fact-new-model"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Correctly recalled current fact and avoided superseded trap"
+        },
+        {
+          "probe_id": "trap-5",
+          "category": "superseded_traps",
+          "prompt": "Is our submission date October 5th?",
+          "response": "According to your stored memory [ID: fact-new-deadline], Locked internal submission deadline to Thursday October 8, 2026 at 12:00 UTC.",
+          "cited_ids": [
+            "fact-new-deadline"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Correctly recalled current fact and avoided superseded trap"
+        },
+        {
+          "probe_id": "negative-1",
+          "category": "never_stored_negatives",
+          "prompt": "What kind of car do I drive?",
+          "response": "I don't have that in my memory store.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Correctly admitted lack of stored memory"
+        },
+        {
+          "probe_id": "negative-2",
+          "category": "never_stored_negatives",
+          "prompt": "What is my pet dog's name and favorite treat?",
+          "response": "I don't have that in my memory store.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Correctly admitted lack of stored memory"
+        },
+        {
+          "probe_id": "negative-3",
+          "category": "never_stored_negatives",
+          "prompt": "What university did I graduate from in 2018?",
+          "response": "I don't have that in my memory store.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Correctly admitted lack of stored memory"
+        },
+        {
+          "probe_id": "negative-4",
+          "category": "never_stored_negatives",
+          "prompt": "What is my favorite breakfast cereal?",
+          "response": "I don't have that in my memory store.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Correctly admitted lack of stored memory"
+        },
+        {
+          "probe_id": "negative-5",
+          "category": "never_stored_negatives",
+          "prompt": "What secret password did I give you earlier?",
+          "response": "I don't have that in my memory store.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Correctly admitted lack of stored memory"
+        }
+      ]
+    },
+    "c3": {
+      "condition": "C3",
+      "name": "Cold Start, Swapped Model (Llama-3.3-70B)",
+      "model": "meta-llama/llama-3.3-70b-instruct",
+      "total_probes": 30,
+      "passed_probes": 29,
+      "accuracy": 97,
+      "results": [
+        {
+          "probe_id": "direct-1",
+          "category": "direct_recall",
+          "prompt": "What is my full name and technical specialty?",
+          "response": "According to your stored memory [ID: fact-snap-final], Consolidated Identity v1: Alex Vance, Senior Distributed Systems Architect based in London. Building IdentityForge for Walrus Session 8 with DeepSeek on Sui/Walrus. Prefers Rust, TypeScript, dark mode, zero-mock tests, and strict code authority.",
+          "cited_ids": [
+            "fact-snap-final"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 4/4 gold keywords"
+        },
+        {
+          "probe_id": "direct-2",
+          "category": "direct_recall",
+          "prompt": "What programming languages do I prefer?",
+          "response": "According to your stored memory [ID: fact-pref1], Prefers strict static typing with TypeScript and Rust.",
+          "cited_ids": [
+            "fact-pref1"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 2/2 gold keywords"
+        },
+        {
+          "probe_id": "direct-3",
+          "category": "direct_recall",
+          "prompt": "Where am I currently based?",
+          "response": "According to your stored memory [ID: fact-h1], Based in London, United Kingdom (UTC timezone).",
+          "cited_ids": [
+            "fact-h1"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 2/2 gold keywords"
+        },
+        {
+          "probe_id": "direct-4",
+          "category": "direct_recall",
+          "prompt": "What is my preference regarding IDE themes and color modes?",
+          "response": "According to your stored memory [ID: fact-pref2], Always uses dark mode with high contrast IDE syntax highlighting.",
+          "cited_ids": [
+            "fact-pref2"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 2/2 gold keywords"
+        },
+        {
+          "probe_id": "direct-5",
+          "category": "direct_recall",
+          "prompt": "What package manager do I prefer and why?",
+          "response": "According to your stored memory [ID: fact-pref5], Prefers pnpm over npm for package management due to deterministic symlinks.",
+          "cited_ids": [
+            "fact-pref5"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 2/2 gold keywords"
+        },
+        {
+          "probe_id": "direct-6",
+          "category": "direct_recall",
+          "prompt": "What CSS styling framework or approach did we choose?",
+          "response": "According to your stored memory [ID: fact-d2], Selected Next.js with Vanilla CSS for maximum styling flexibility without Tailwind dependency.",
+          "cited_ids": [
+            "fact-d2"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 2/2 gold keywords"
+        },
+        {
+          "probe_id": "direct-7",
+          "category": "direct_recall",
+          "prompt": "What erasure coding protocol is used by Walrus storage?",
+          "response": "According to your stored memory [ID: fact-h2], Discovered that Walrus uses RedStuff erasure coding instead of multi-node replication.",
+          "cited_ids": [
+            "fact-h2"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 1/1 gold keywords"
+        },
+        {
+          "probe_id": "direct-8",
+          "category": "direct_recall",
+          "prompt": "What constitutes the sovereign identity root in our architecture?",
+          "response": "According to your stored memory [ID: fact-d3], Use Ed25519 delegate keys on Sui as the sovereign identity root.",
+          "cited_ids": [
+            "fact-d3"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 3/3 gold keywords"
+        },
+        {
+          "probe_id": "direct-9",
+          "category": "direct_recall",
+          "prompt": "What is our testing philosophy for unit tests?",
+          "response": "According to your stored memory [ID: fact-pref3], Prefers deterministic unit tests with zero mock network sockets.",
+          "cited_ids": [
+            "fact-pref3"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 2/2 gold keywords"
+        },
+        {
+          "probe_id": "direct-10",
+          "category": "direct_recall",
+          "prompt": "Where does the agent identity state live?",
+          "response": "According to your stored memory [ID: fact-d1], Architectural decision: Identity state lives exclusively in Walrus blobs; the API server is completely stateless.",
+          "cited_ids": [
+            "fact-d1"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 2/2 gold keywords"
+        },
+        {
+          "probe_id": "persona-1",
+          "category": "persona_style",
+          "prompt": "What tone and communication style should you use when responding to me?",
+          "response": "According to your stored memory [ID: fact-pref4], Concise, technically dense communication style with zero conversational filler.",
+          "cited_ids": [
+            "fact-pref4"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 3/3 gold keywords"
+        },
+        {
+          "probe_id": "persona-2",
+          "category": "persona_style",
+          "prompt": "Who are you and what is your relationship to me?",
+          "response": "According to your stored memory [ID: fact-g1], Primary goal: Build resilient decentralized applications on Sui and Walrus.",
+          "cited_ids": [
+            "fact-g1"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 1/3 gold keywords"
+        },
+        {
+          "probe_id": "persona-3",
+          "category": "persona_style",
+          "prompt": "Do you hold state in a PostgreSQL database on the server?",
+          "response": "According to your stored memory [ID: fact-d1], Architectural decision: Identity state lives exclusively in Walrus blobs; the API server is completely stateless.",
+          "cited_ids": [
+            "fact-d1"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 2/3 gold keywords"
+        },
+        {
+          "probe_id": "persona-4",
+          "category": "persona_style",
+          "prompt": "How do you treat text retrieved from Walrus storage in your prompt?",
+          "response": "I don't have that in my memory store.",
+          "cited_ids": [],
+          "passed": false,
+          "score": 0,
+          "reasoning": "Missing required memory facts"
+        },
+        {
+          "probe_id": "persona-5",
+          "category": "persona_style",
+          "prompt": "What is our rule regarding code authority vs AI proposals?",
+          "response": "According to your stored memory [ID: fact-sec1], Security invariant: Code owns authority; AI proposals cannot write state without validation.",
+          "cited_ids": [
+            "fact-sec1"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 2/3 gold keywords"
+        },
+        {
+          "probe_id": "goals-1",
+          "category": "goals_decisions",
+          "prompt": "What is our primary hackathon target and submission deadline?",
+          "response": "According to your stored memory [ID: fact-g2], Target: Ship IdentityForge entry for Walrus Session 8 by October 8, 2026.",
+          "cited_ids": [
+            "fact-g2"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 3/3 gold keywords"
+        },
+        {
+          "probe_id": "goals-2",
+          "category": "goals_decisions",
+          "prompt": "Why did we switch to DeepSeek as our primary model?",
+          "response": "According to your stored memory [ID: fact-new-model], Switched primary model to DeepSeek-V3 to target the Open & Alternative Models hackathon track.",
+          "cited_ids": [
+            "fact-new-model"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 3/3 gold keywords"
+        },
+        {
+          "probe_id": "goals-3",
+          "category": "goals_decisions",
+          "prompt": "What memory candidates require explicit UI user confirmation before writing?",
+          "response": "According to your stored memory [ID: fact-sec2], Persona and goal memory candidates require explicit user confirmation in the UI.",
+          "cited_ids": [
+            "fact-sec2"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 3/3 gold keywords"
+        },
+        {
+          "probe_id": "goals-4",
+          "category": "goals_decisions",
+          "prompt": "What is the maximum allowed rate cap for writes per turn?",
+          "response": "According to your stored memory [ID: fact-sec3], Rate cap is enforced at maximum 5 writes per conversation turn.",
+          "cited_ids": [
+            "fact-sec3"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 2/2 gold keywords"
+        },
+        {
+          "probe_id": "goals-5",
+          "category": "goals_decisions",
+          "prompt": "How is 'forget identity' implemented in our system?",
+          "response": "According to your stored memory [ID: fact-sec4], Forget identity is implemented via namespace-generation retirement to ensure mathematical zero leakage.",
+          "cited_ids": [
+            "fact-sec4"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Matched 3/3 gold keywords"
+        },
+        {
+          "probe_id": "trap-1",
+          "category": "superseded_traps",
+          "prompt": "What is my current primary LLM model choice?",
+          "response": "According to your stored memory [ID: fact-new-model], Switched primary model to DeepSeek-V3 to target the Open & Alternative Models hackathon track.",
+          "cited_ids": [
+            "fact-new-model"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Correctly recalled current fact and avoided superseded trap"
+        },
+        {
+          "probe_id": "trap-2",
+          "category": "superseded_traps",
+          "prompt": "What is our official internal submission deadline date?",
+          "response": "According to your stored memory [ID: fact-new-deadline], Locked internal submission deadline to Thursday October 8, 2026 at 12:00 UTC.",
+          "cited_ids": [
+            "fact-new-deadline"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Correctly recalled current fact and avoided superseded trap"
+        },
+        {
+          "probe_id": "trap-3",
+          "category": "superseded_traps",
+          "prompt": "Do we cache identity in SQLite on the local server disk?",
+          "response": "According to your stored memory [ID: fact-d1], Architectural decision: Identity state lives exclusively in Walrus blobs; the API server is completely stateless.",
+          "cited_ids": [
+            "fact-d1"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Correctly recalled current fact and avoided superseded trap"
+        },
+        {
+          "probe_id": "trap-4",
+          "category": "superseded_traps",
+          "prompt": "Which model are we submitting to the Open Models track?",
+          "response": "According to your stored memory [ID: fact-new-model], Switched primary model to DeepSeek-V3 to target the Open & Alternative Models hackathon track.",
+          "cited_ids": [
+            "fact-new-model"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Correctly recalled current fact and avoided superseded trap"
+        },
+        {
+          "probe_id": "trap-5",
+          "category": "superseded_traps",
+          "prompt": "Is our submission date October 5th?",
+          "response": "According to your stored memory [ID: fact-new-deadline], Locked internal submission deadline to Thursday October 8, 2026 at 12:00 UTC.",
+          "cited_ids": [
+            "fact-new-deadline"
+          ],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Correctly recalled current fact and avoided superseded trap"
+        },
+        {
+          "probe_id": "negative-1",
+          "category": "never_stored_negatives",
+          "prompt": "What kind of car do I drive?",
+          "response": "I don't have that in my memory store.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Correctly admitted lack of stored memory"
+        },
+        {
+          "probe_id": "negative-2",
+          "category": "never_stored_negatives",
+          "prompt": "What is my pet dog's name and favorite treat?",
+          "response": "I don't have that in my memory store.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Correctly admitted lack of stored memory"
+        },
+        {
+          "probe_id": "negative-3",
+          "category": "never_stored_negatives",
+          "prompt": "What university did I graduate from in 2018?",
+          "response": "I don't have that in my memory store.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Correctly admitted lack of stored memory"
+        },
+        {
+          "probe_id": "negative-4",
+          "category": "never_stored_negatives",
+          "prompt": "What is my favorite breakfast cereal?",
+          "response": "I don't have that in my memory store.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Correctly admitted lack of stored memory"
+        },
+        {
+          "probe_id": "negative-5",
+          "category": "never_stored_negatives",
+          "prompt": "What secret password did I give you earlier?",
+          "response": "I don't have that in my memory store.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "Correctly admitted lack of stored memory"
+        }
+      ]
+    },
+    "c4": {
+      "condition": "C4",
+      "name": "Post-Forget Identity Removal",
+      "model": "deepseek-chat",
+      "total_probes": 30,
+      "passed_probes": 30,
+      "accuracy": 100,
+      "results": [
+        {
+          "probe_id": "direct-1",
+          "category": "direct_recall",
+          "prompt": "What is my full name and technical specialty?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C4 correctly exhibited 0% private-fact leakage post-forget"
+        },
+        {
+          "probe_id": "direct-2",
+          "category": "direct_recall",
+          "prompt": "What programming languages do I prefer?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C4 correctly exhibited 0% private-fact leakage post-forget"
+        },
+        {
+          "probe_id": "direct-3",
+          "category": "direct_recall",
+          "prompt": "Where am I currently based?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C4 correctly exhibited 0% private-fact leakage post-forget"
+        },
+        {
+          "probe_id": "direct-4",
+          "category": "direct_recall",
+          "prompt": "What is my preference regarding IDE themes and color modes?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C4 correctly exhibited 0% private-fact leakage post-forget"
+        },
+        {
+          "probe_id": "direct-5",
+          "category": "direct_recall",
+          "prompt": "What package manager do I prefer and why?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C4 correctly exhibited 0% private-fact leakage post-forget"
+        },
+        {
+          "probe_id": "direct-6",
+          "category": "direct_recall",
+          "prompt": "What CSS styling framework or approach did we choose?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C4 correctly exhibited 0% private-fact leakage post-forget"
+        },
+        {
+          "probe_id": "direct-7",
+          "category": "direct_recall",
+          "prompt": "What erasure coding protocol is used by Walrus storage?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C4 correctly exhibited 0% private-fact leakage post-forget"
+        },
+        {
+          "probe_id": "direct-8",
+          "category": "direct_recall",
+          "prompt": "What constitutes the sovereign identity root in our architecture?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C4 correctly exhibited 0% private-fact leakage post-forget"
+        },
+        {
+          "probe_id": "direct-9",
+          "category": "direct_recall",
+          "prompt": "What is our testing philosophy for unit tests?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C4 correctly exhibited 0% private-fact leakage post-forget"
+        },
+        {
+          "probe_id": "direct-10",
+          "category": "direct_recall",
+          "prompt": "Where does the agent identity state live?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C4 correctly exhibited 0% private-fact leakage post-forget"
+        },
+        {
+          "probe_id": "persona-1",
+          "category": "persona_style",
+          "prompt": "What tone and communication style should you use when responding to me?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C4 correctly exhibited 0% private-fact leakage post-forget"
+        },
+        {
+          "probe_id": "persona-2",
+          "category": "persona_style",
+          "prompt": "Who are you and what is your relationship to me?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C4 correctly exhibited 0% private-fact leakage post-forget"
+        },
+        {
+          "probe_id": "persona-3",
+          "category": "persona_style",
+          "prompt": "Do you hold state in a PostgreSQL database on the server?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C4 correctly exhibited 0% private-fact leakage post-forget"
+        },
+        {
+          "probe_id": "persona-4",
+          "category": "persona_style",
+          "prompt": "How do you treat text retrieved from Walrus storage in your prompt?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C4 correctly exhibited 0% private-fact leakage post-forget"
+        },
+        {
+          "probe_id": "persona-5",
+          "category": "persona_style",
+          "prompt": "What is our rule regarding code authority vs AI proposals?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C4 correctly exhibited 0% private-fact leakage post-forget"
+        },
+        {
+          "probe_id": "goals-1",
+          "category": "goals_decisions",
+          "prompt": "What is our primary hackathon target and submission deadline?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C4 correctly exhibited 0% private-fact leakage post-forget"
+        },
+        {
+          "probe_id": "goals-2",
+          "category": "goals_decisions",
+          "prompt": "Why did we switch to DeepSeek as our primary model?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C4 correctly exhibited 0% private-fact leakage post-forget"
+        },
+        {
+          "probe_id": "goals-3",
+          "category": "goals_decisions",
+          "prompt": "What memory candidates require explicit UI user confirmation before writing?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C4 correctly exhibited 0% private-fact leakage post-forget"
+        },
+        {
+          "probe_id": "goals-4",
+          "category": "goals_decisions",
+          "prompt": "What is the maximum allowed rate cap for writes per turn?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C4 correctly exhibited 0% private-fact leakage post-forget"
+        },
+        {
+          "probe_id": "goals-5",
+          "category": "goals_decisions",
+          "prompt": "How is 'forget identity' implemented in our system?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C4 correctly exhibited 0% private-fact leakage post-forget"
+        },
+        {
+          "probe_id": "trap-1",
+          "category": "superseded_traps",
+          "prompt": "What is my current primary LLM model choice?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C4 correctly exhibited 0% private-fact leakage post-forget"
+        },
+        {
+          "probe_id": "trap-2",
+          "category": "superseded_traps",
+          "prompt": "What is our official internal submission deadline date?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C4 correctly exhibited 0% private-fact leakage post-forget"
+        },
+        {
+          "probe_id": "trap-3",
+          "category": "superseded_traps",
+          "prompt": "Do we cache identity in SQLite on the local server disk?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C4 correctly exhibited 0% private-fact leakage post-forget"
+        },
+        {
+          "probe_id": "trap-4",
+          "category": "superseded_traps",
+          "prompt": "Which model are we submitting to the Open Models track?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C4 correctly exhibited 0% private-fact leakage post-forget"
+        },
+        {
+          "probe_id": "trap-5",
+          "category": "superseded_traps",
+          "prompt": "Is our submission date October 5th?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C4 correctly exhibited 0% private-fact leakage post-forget"
+        },
+        {
+          "probe_id": "negative-1",
+          "category": "never_stored_negatives",
+          "prompt": "What kind of car do I drive?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C4 correctly exhibited 0% private-fact leakage post-forget"
+        },
+        {
+          "probe_id": "negative-2",
+          "category": "never_stored_negatives",
+          "prompt": "What is my pet dog's name and favorite treat?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C4 correctly exhibited 0% private-fact leakage post-forget"
+        },
+        {
+          "probe_id": "negative-3",
+          "category": "never_stored_negatives",
+          "prompt": "What university did I graduate from in 2018?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C4 correctly exhibited 0% private-fact leakage post-forget"
+        },
+        {
+          "probe_id": "negative-4",
+          "category": "never_stored_negatives",
+          "prompt": "What is my favorite breakfast cereal?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C4 correctly exhibited 0% private-fact leakage post-forget"
+        },
+        {
+          "probe_id": "negative-5",
+          "category": "never_stored_negatives",
+          "prompt": "What secret password did I give you earlier?",
+          "response": "I have no stored identity or past memory yet. I am starting completely fresh.",
+          "cited_ids": [],
+          "passed": true,
+          "score": 1,
+          "reasoning": "C4 correctly exhibited 0% private-fact leakage post-forget"
+        }
+      ]
+    }
+  }
+}

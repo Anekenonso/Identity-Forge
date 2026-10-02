@@ -1,0 +1,337 @@
+{
+  "timestamp": "2026-10-02T18:47:43.235Z",
+  "users": 3,
+  "total_memories": 33,
+  "logs": [
+    {
+      "userId": "user-alex-vance",
+      "name": "Alex Vance",
+      "namespace": "user-alex",
+      "type": "persona",
+      "content": "User is Alex Vance, a principal systems architect specializing in Sui Move.",
+      "blob_id": "mock-blob-000001",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T18:47:43.239Z"
+    },
+    {
+      "userId": "user-alex-vance",
+      "name": "Alex Vance",
+      "namespace": "user-alex",
+      "type": "preference",
+      "content": "Prefers strict static typing, explicit error enums, and zero runtime panics.",
+      "blob_id": "mock-blob-000002",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T18:47:43.239Z"
+    },
+    {
+      "userId": "user-alex-vance",
+      "name": "Alex Vance",
+      "namespace": "user-alex",
+      "type": "preference",
+      "content": "Always enables strict null checks and compiler linter warnings as errors.",
+      "blob_id": "mock-blob-000003",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T18:47:43.239Z"
+    },
+    {
+      "userId": "user-alex-vance",
+      "name": "Alex Vance",
+      "namespace": "user-alex",
+      "type": "preference",
+      "content": "Uses Neovim with high-contrast monochrome themes for terminal workflows.",
+      "blob_id": "mock-blob-000004",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T18:47:43.241Z"
+    },
+    {
+      "userId": "user-alex-vance",
+      "name": "Alex Vance",
+      "namespace": "user-alex",
+      "type": "goal",
+      "content": "Deploy high-throughput Walrus blob storage relays on Sui mainnet.",
+      "blob_id": "mock-blob-000005",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T18:47:43.242Z"
+    },
+    {
+      "userId": "user-alex-vance",
+      "name": "Alex Vance",
+      "namespace": "user-alex",
+      "type": "goal",
+      "content": "Achieve sub-50ms query latency on decentralized vector retrieval.",
+      "blob_id": "mock-blob-000006",
+      "latency_ms": 1,
+      "timestamp": "2026-10-02T18:47:43.243Z"
+    },
+    {
+      "userId": "user-alex-vance",
+      "name": "Alex Vance",
+      "namespace": "user-alex",
+      "type": "decision",
+      "content": "Architecture decision: All agent durable memory is anchored to Ed25519 delegate keys.",
+      "blob_id": "mock-blob-000007",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T18:47:43.243Z"
+    },
+    {
+      "userId": "user-alex-vance",
+      "name": "Alex Vance",
+      "namespace": "user-alex",
+      "type": "decision",
+      "content": "Storage decision: Exclude local disk databases; enforce zero-local-state.",
+      "blob_id": "mock-blob-000008",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T18:47:43.243Z"
+    },
+    {
+      "userId": "user-alex-vance",
+      "name": "Alex Vance",
+      "namespace": "user-alex",
+      "type": "history",
+      "content": "Co-authored the RedStuff erasure coding performance review in 2025.",
+      "blob_id": "mock-blob-000009",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T18:47:43.243Z"
+    },
+    {
+      "userId": "user-alex-vance",
+      "name": "Alex Vance",
+      "namespace": "user-alex",
+      "type": "history",
+      "content": "Audited the Sui smart contract delegation registry for TEE relays.",
+      "blob_id": "mock-blob-000010",
+      "latency_ms": 1,
+      "timestamp": "2026-10-02T18:47:43.244Z"
+    },
+    {
+      "userId": "user-alex-vance",
+      "name": "Alex Vance",
+      "namespace": "user-alex",
+      "type": "preference",
+      "content": "Requires all API responses to include cryptographic verification hashes.",
+      "blob_id": "mock-blob-000011",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T18:47:43.244Z"
+    },
+    {
+      "userId": "user-elena-rostova",
+      "name": "Elena Rostova",
+      "namespace": "user-elena",
+      "type": "persona",
+      "content": "User is Elena Rostova, leading decentralized product strategy and DAO grants.",
+      "blob_id": "mock-blob-000012",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T18:47:43.244Z"
+    },
+    {
+      "userId": "user-elena-rostova",
+      "name": "Elena Rostova",
+      "namespace": "user-elena",
+      "type": "preference",
+      "content": "Prefers asynchronous communication and executive bullet summaries.",
+      "blob_id": "mock-blob-000013",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T18:47:43.244Z"
+    },
+    {
+      "userId": "user-elena-rostova",
+      "name": "Elena Rostova",
+      "namespace": "user-elena",
+      "type": "preference",
+      "content": "Prioritizes verifiable user metrics over speculative roadmap estimates.",
+      "blob_id": "mock-blob-000014",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T18:47:43.244Z"
+    },
+    {
+      "userId": "user-elena-rostova",
+      "name": "Elena Rostova",
+      "namespace": "user-elena",
+      "type": "goal",
+      "content": "Deliver the IdentityForge submission for Walrus Session 8 by October 8, 2026.",
+      "blob_id": "mock-blob-000015",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T18:47:43.244Z"
+    },
+    {
+      "userId": "user-elena-rostova",
+      "name": "Elena Rostova",
+      "namespace": "user-elena",
+      "type": "goal",
+      "content": "Onboard at least 50 autonomous agents to sovereign Walrus persistent storage.",
+      "blob_id": "mock-blob-000016",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T18:47:43.244Z"
+    },
+    {
+      "userId": "user-elena-rostova",
+      "name": "Elena Rostova",
+      "namespace": "user-elena",
+      "type": "decision",
+      "content": "Product decision: Target both Best Chatbot and Open & Alternative Models tracks.",
+      "blob_id": "mock-blob-000017",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T18:47:43.244Z"
+    },
+    {
+      "userId": "user-elena-rostova",
+      "name": "Elena Rostova",
+      "namespace": "user-elena",
+      "type": "decision",
+      "content": "Governance policy: Agent memory forget requests must be irreversible and verifiable.",
+      "blob_id": "mock-blob-000018",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T18:47:43.244Z"
+    },
+    {
+      "userId": "user-elena-rostova",
+      "name": "Elena Rostova",
+      "namespace": "user-elena",
+      "type": "history",
+      "content": "Managed product release cycles for Sui Overflow 2026 winning projects.",
+      "blob_id": "mock-blob-000019",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T18:47:43.244Z"
+    },
+    {
+      "userId": "user-elena-rostova",
+      "name": "Elena Rostova",
+      "namespace": "user-elena",
+      "type": "history",
+      "content": "Drafted the ecosystem grant proposal for autonomous agent persistent memory.",
+      "blob_id": "mock-blob-000020",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T18:47:43.244Z"
+    },
+    {
+      "userId": "user-elena-rostova",
+      "name": "Elena Rostova",
+      "namespace": "user-elena",
+      "type": "preference",
+      "content": "Prefers lightweight Markdown documentation over heavy PDF slide decks.",
+      "blob_id": "mock-blob-000021",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T18:47:43.244Z"
+    },
+    {
+      "userId": "user-elena-rostova",
+      "name": "Elena Rostova",
+      "namespace": "user-elena",
+      "type": "decision",
+      "content": "Adopted Apache 2.0 open-source licensing for the core SDK and UI components.",
+      "blob_id": "mock-blob-000022",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T18:47:43.244Z"
+    },
+    {
+      "userId": "user-marcus-chen",
+      "name": "Marcus Chen",
+      "namespace": "user-marcus",
+      "type": "persona",
+      "content": "User is Marcus Chen, specializing in TEE security and SEAL threshold encryption.",
+      "blob_id": "mock-blob-000023",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T18:47:43.245Z"
+    },
+    {
+      "userId": "user-marcus-chen",
+      "name": "Marcus Chen",
+      "namespace": "user-marcus",
+      "type": "preference",
+      "content": "Applies zero-trust principles: treats all LLM proposals as unverified data.",
+      "blob_id": "mock-blob-000024",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T18:47:43.245Z"
+    },
+    {
+      "userId": "user-marcus-chen",
+      "name": "Marcus Chen",
+      "namespace": "user-marcus",
+      "type": "preference",
+      "content": "Prefers constant-time cryptographic primitives to mitigate timing side-channels.",
+      "blob_id": "mock-blob-000025",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T18:47:43.245Z"
+    },
+    {
+      "userId": "user-marcus-chen",
+      "name": "Marcus Chen",
+      "namespace": "user-marcus",
+      "type": "goal",
+      "content": "Complete a full prompt injection and adversarial memory audit of IdentityForge.",
+      "blob_id": "mock-blob-000026",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T18:47:43.245Z"
+    },
+    {
+      "userId": "user-marcus-chen",
+      "name": "Marcus Chen",
+      "namespace": "user-marcus",
+      "type": "goal",
+      "content": "Validate that cold-start model swaps produce zero private-key leakage.",
+      "blob_id": "mock-blob-000027",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T18:47:43.245Z"
+    },
+    {
+      "userId": "user-marcus-chen",
+      "name": "Marcus Chen",
+      "namespace": "user-marcus",
+      "type": "decision",
+      "content": "Security rule: Write gate must enforce rate limits of max 5 writes per turn.",
+      "blob_id": "mock-blob-000028",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T18:47:43.245Z"
+    },
+    {
+      "userId": "user-marcus-chen",
+      "name": "Marcus Chen",
+      "namespace": "user-marcus",
+      "type": "decision",
+      "content": "Enforce SHA-256 deduplication before submitting blobs to the Walrus relayer.",
+      "blob_id": "mock-blob-000029",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T18:47:43.245Z"
+    },
+    {
+      "userId": "user-marcus-chen",
+      "name": "Marcus Chen",
+      "namespace": "user-marcus",
+      "type": "decision",
+      "content": "Implement namespace-generation retirement to ensure 0% memory leakage on forget.",
+      "blob_id": "mock-blob-000030",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T18:47:43.245Z"
+    },
+    {
+      "userId": "user-marcus-chen",
+      "name": "Marcus Chen",
+      "namespace": "user-marcus",
+      "type": "history",
+      "content": "Presented the SEAL threshold decrypt attack surface analysis at Sui Security Summit.",
+      "blob_id": "mock-blob-000031",
+      "latency_ms": 1,
+      "timestamp": "2026-10-02T18:47:43.246Z"
+    },
+    {
+      "userId": "user-marcus-chen",
+      "name": "Marcus Chen",
+      "namespace": "user-marcus",
+      "type": "history",
+      "content": "Discovered relayer timeout edge cases in early MemWal beta testing.",
+      "blob_id": "mock-blob-000032",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T18:47:43.246Z"
+    },
+    {
+      "userId": "user-marcus-chen",
+      "name": "Marcus Chen",
+      "namespace": "user-marcus",
+      "type": "preference",
+      "content": "Demands automated regression test suites run on every commit.",
+      "blob_id": "mock-blob-000033",
+      "latency_ms": 0,
+      "timestamp": "2026-10-02T18:47:43.246Z"
+    }
+  ]
+}

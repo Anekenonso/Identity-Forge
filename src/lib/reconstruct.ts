@@ -4,9 +4,9 @@
  * Reconstructs identity state cold every turn from Walrus Memory.
  */
 
-import { encodeEnvelope, filterSupersededFacts, parseEnvelope } from "./envelope.js";
-import { getMemWalClient } from "./memwal-client.js";
-import type { EvidenceLogEntry, IdentitySnapshot, RecalledFact, ReconstructionResult } from "./types.js";
+import { encodeEnvelope, filterSupersededFacts, parseEnvelope } from "./envelope";
+import { getMemWalClient } from "./memwal-client";
+import type { EvidenceLogEntry, IdentitySnapshot, RecalledFact, ReconstructionResult } from "./types";
 
 export async function reconstructIdentity(
   userQuery: string,

@@ -4,7 +4,7 @@
  */
 
 import * as crypto from "node:crypto";
-import type { MemoryEnvelope, MemoryType, RecalledFact } from "./types.js";
+import type { MemoryEnvelope, MemoryType, RecalledFact } from "./types";
 
 const VALID_TYPES: Set<MemoryType> = new Set([
   "persona",
