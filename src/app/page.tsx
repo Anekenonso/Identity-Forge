@@ -479,6 +479,44 @@ export default function Home() {
         </section>
       </main>
 
+      {/* Fauzec Site Footer */}
+      <footer className="fauzec-footer">
+        <div className="fauzec-footer-container">
+          <div className="footer-left">
+            <div className="footer-brand">
+              <div className="fauzec-brand-icon" style={{ width: "24px", height: "24px" }}>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                  <polyline points="2 17 12 22 22 17" />
+                  <polyline points="2 12 12 17 22 12" />
+                </svg>
+              </div>
+              <span style={{ fontWeight: 700, fontSize: "0.92rem", color: "var(--text-primary)" }}>IdentityForge</span>
+              <span className="fauzec-pill fauzec-pill-amber" style={{ fontSize: "0.65rem", padding: "2px 8px" }}>v2.0</span>
+            </div>
+            <p className="footer-desc">
+              Decentralized persistent memory for autonomous AI agents. Powered by Walrus Protocol.
+            </p>
+          </div>
+
+          <div className="footer-center">
+            <span>Walrus Session 8: Chatbots That Remember · Apache-2.0</span>
+          </div>
+
+          <div className="footer-links">
+            <a href="https://github.com/Anekenonso/Identity-Forge" target="_blank" rel="noopener noreferrer" className="footer-link">
+              GitHub
+            </a>
+            <a href="https://www.deepsurge.xyz/hackathons/c0141a4a-21be-4009-bc63-7c168608c849" target="_blank" rel="noopener noreferrer" className="footer-link">
+              Walrus Session 8
+            </a>
+            <a href="/api/health" target="_blank" rel="noopener noreferrer" className="footer-link">
+              Health API
+            </a>
+          </div>
+        </div>
+      </footer>
+
       {/* Write Confirmation Modal */}
       <WriteConfirmModal
         candidate={pendingCandidate}
